@@ -1,0 +1,20 @@
+Governance Multisig Configuration
+=================================
+
+Threshold: 3-of-N signatures
+Proposal Duration: 7 days
+Execution Delay: 24 hours
+Minimum Quorum: 2 proposals
+
+Governance Members:
+- Primary: ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5
+- Secondary: TBD
+- Tertiary: TBD
+
+Emergency Procedures:
+- Circuit breaker: ACTIVE
+- Emergency multisig: READY
+- Volume limits: 1M STX equivalent
+
+Deployment Date: Fri 04 Jul 2025 10:22:17 PM PDT
+Status: ACTIVE

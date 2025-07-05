@@ -1,0 +1,10 @@
+# Oracle 4 Public Key (Dilithium3)
+# Generated: Fri 04 Jul 2025 10:22:16 PM PDT
+# Key ID: oracle_4_20250704_222216
+# Key Size: 1472 bytes (quantum-resistant)
+# Algorithm: Dilithium3
+# Status: Active
+
+# Placeholder for actual Dilithium3 public key
+# Replace with actual key in production deployment
+ORACLE_4_PUBLIC_KEY_PLACEHOLDER_41d4ae7926d7124e003cc504e24e9a1e

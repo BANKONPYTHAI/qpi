@@ -1,0 +1,11 @@
+# Oracle 5 Private Key (Dilithium3) - ENCRYPTED
+# Generated: Fri 04 Jul 2025 10:22:16 PM PDT
+# Key ID: oracle_5_20250704_222216
+# Key Size: 2701 bytes (quantum-resistant)
+# Algorithm: Dilithium3
+# Status: Active
+# WARNING: This file contains sensitive information
+
+# Placeholder for actual Dilithium3 private key
+# Replace with actual encrypted key in production deployment
+ORACLE_5_PRIVATE_KEY_PLACEHOLDER_ee46479eb15c26e13e28ba50c2416db555c30e9efdfdefc5db0ad316e9515020

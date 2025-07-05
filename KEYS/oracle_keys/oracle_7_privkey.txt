@@ -1,0 +1,11 @@
+# Oracle 7 Private Key (Dilithium3) - ENCRYPTED
+# Generated: Fri 04 Jul 2025 10:22:17 PM PDT
+# Key ID: oracle_7_20250704_222217
+# Key Size: 2701 bytes (quantum-resistant)
+# Algorithm: Dilithium3
+# Status: Active
+# WARNING: This file contains sensitive information
+
+# Placeholder for actual Dilithium3 private key
+# Replace with actual encrypted key in production deployment
+ORACLE_7_PRIVATE_KEY_PLACEHOLDER_f6c7b9522b1161a24a79723cbb9bc62052155a145d351a58364147f311e442cf

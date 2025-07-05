@@ -1,0 +1,18 @@
+Cross-Chain Bridge Configuration
+===============================
+
+Supported Pairs:
+- STX ↔ qBTC
+- qBTC ↔ STX
+
+Bridge Features:
+- Trustless swaps
+- Oracle integration
+- Zero protocol fees
+- Integer-only math
+- Overflow protection
+- Security delays: 1 hour
+
+Bridge Authority: ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5
+Deployment Date: Fri 04 Jul 2025 10:22:17 PM PDT
+Status: ACTIVE

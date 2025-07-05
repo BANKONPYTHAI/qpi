@@ -1,0 +1,20 @@
+Oracle Committee Configuration
+=============================
+
+Committee Size: 7
+Quorum Threshold: 4-of-7
+Signature Algorithm: Dilithium3
+Public Key Size: 1472 bytes
+Signature Size: 2701 bytes
+
+Oracle Members:
+Oracle 1: KEY
+Oracle 2: KEY
+Oracle 3: KEY
+Oracle 4: KEY
+Oracle 5: KEY
+Oracle 6: KEY
+Oracle 7: KEY
+
+Deployment Date: Fri 04 Jul 2025 10:22:17 PM PDT
+Status: ACTIVE
