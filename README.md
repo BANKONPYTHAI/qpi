@@ -1,4 +1,4 @@
-# BANKON PYTHAI QPI - Production Ready
+# BANKON PYTHAI QPI - TESTNET Ready
 
 [![QPI Compliance](https://img.shields.io/badge/QPI-100%25%20Compliant-brightgreen)](https://github.com/BANKONPYTHAI/qpi)
 [![Security Audit](https://img.shields.io/badge/Security-Audit%20Passed-brightgreen)](https://github.com/BANKONPYTHAI/qpi)
@@ -8,7 +8,7 @@
 
 ## 🚀 Overview
 
-BANKON PYTHAI QPI is a complete, production-ready quantum-resistant DeFi ecosystem built on the Qubic network using the Qubic Programming Interface (QPI). This repository contains the full implementation with 100% QPI compliance, comprehensive security features, and complete deployment infrastructure.
+BANKON PYTHAI QPI is a complete, testnet-production-ready quantum-resistant DeFi ecosystem built on the Qubic network using the Qubic Programming Interface (QPI). This repository contains the full implementation with 100% QPI compliance, comprehensive security features, and complete deployment infrastructure.
 
 ## ✨ Features
 
@@ -26,11 +26,11 @@ BANKON PYTHAI QPI is a complete, production-ready quantum-resistant DeFi ecosyst
 ```
 qpi/
 ├── CONTRACTS/                    # QPI-Compliant Smart Contracts
-│   ├── qOracle_QPI_Compliant.cpp       # Main oracle system (25KB)
-│   ├── BANKON_PYTHAI_QPI_Compliant.cpp # Native token (10KB)
-│   ├── qBTC_Synthetic_QPI_Compliant.cpp # Synthetic BTC (15KB)
-│   ├── qUSD_Stablecoin_QPI_Compliant.cpp # Stablecoin (12KB)
-│   └── BANKON_SATPAY_QPI_Compliant.cpp # Micro-unit token (12KB)
+│   ├── qOracle_QPI_Compliant.cpp       # Main oracle system
+│   ├── BANKON_PYTHAI_QPI_Compliant.cpp # Native token
+│   ├── qBTC_Synthetic_QPI_Compliant.cpp # Synthetic BTC
+│   ├── qUSD_Stablecoin_QPI_Compliant.cpp # Stablecoin
+│   └── BANKON_SATPAY_QPI_Compliant.cpp # Micro-unit token
 │
 ├── DEPLOYMENT/                   # Deployment Scripts & Configs
 │   ├── configs/                  # Configuration files
