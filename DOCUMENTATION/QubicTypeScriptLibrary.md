@@ -1,6 +1,6 @@
 // extrapolated from official Qubic Docs <a href="https://github.com/qubic/ts-library">https://github.com/qubic/ts-library</a><br />
 TypeScript Library
-<a href="https://www.npmjs.com/package/@qubic-lib/qubic-ts-library">https://www.npmjs.com/package/@qubic-lib/qubic-ts-library</a>
+<a href="https://www.npmjs.com/package/@qubic-lib/qubic-ts-library">https://www.npmjs.com/package/@qubic-lib/qubic-ts-library</a><br />
 Qubic provides an official TypeScript library to interact with the Qubic network programmatically:
 
 Installation
