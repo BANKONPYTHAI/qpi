@@ -2,23 +2,31 @@ TypeScript Library
 Qubic provides an official TypeScript library to interact with the Qubic network programmatically:
 
 Installation
+```bash
 yarn add @qubic-lib/qubic-ts-library
+```
 or
-
+```bash
 npm install @qubic-lib/qubic-ts-library
+```
 Basic Usage
+```ts
 // Import helper
 import { QubicHelper } from 'qubic-ts-library/dist/qubicHelper'
-
+```
+```ts
 // Create an ID Package with private/public key and human readable address
 const id = await helper.createIdPackage("your-seed-phrase");
-
+```
+```ts
 // Connect to a node
 import { QubicConnector } from 'qubic-ts-library/dist/qubicConnector'
 const connector = new QubicConnector("https://rpc.qubic.org");
-
+```
+```ts
 // Get balance
 const balance = await connector.getBalance("IDENTITY_HERE");
+```
 Check the examples directory for more usage scenarios, including:
 
 Creating transactions
@@ -27,6 +35,7 @@ Managing multiple users
 Handling deposits/withdrawals
 Frontend Application
 Frontend Overview
+
 We've built a frontend application that demonstrates how to interact with the Qubic blockchain and specifically with the HM25 template smart contract deployed on the testnet. This application serves as an example of how to build user interfaces for Qubic-based dApps.
 
 Source Code: https://github.com/icyblob/hm25-frontend - Clone this repository to run the app locally, detailed setup instructions are provided in the repository README.
@@ -67,16 +76,16 @@ The frontend interacts with the HM25 smart contract through several key function
 
 1. Contract Constants
 First, we define constants for interacting with the contract:
-
+```txt
 export const HM25_CONTRACT_INDEX = 12  // The index of the HM25 contract on the testnet
-
 // Function and procedure types
 export const PROC_ECHO = 1     // Echo procedure type ID
 export const PROC_BURN = 2     // Burn procedure type ID
 export const FUNC_GET_STATS = 1  // GetStats function type ID
-2. Reading Contract State (GetStats)
+```
+Reading Contract State (GetStats)
 To read data from the smart contract (like statistics), we use the /v1/querySmartContract endpoint:
-
+```ts
 export async function fetchHM25Stats(httpEndpoint) {
     // Create the query data for the GetStats function (type 1)
     const queryData = makeJsonData(HM25_CONTRACT_INDEX, FUNC_GET_STATS, 0, '')
@@ -111,9 +120,10 @@ export async function fetchHM25Stats(httpEndpoint) {
         }
     }
 }
-3. Creating Transaction for Echo Procedure
+```
+Creating Transaction for Echo Procedure
 To call the Echo procedure (which returns funds to the sender), we build a transaction:
-
+```ts
 export async function buildEchoTx(qHelper, sourcePublicKey, tick, amount) {
     const finalTick = tick + TICK_OFFSET  // Add offset to current tick
     const INPUT_SIZE = 0  // No input data for Echo
@@ -143,9 +153,10 @@ export async function buildEchoTx(qHelper, sourcePublicKey, tick, amount) {
 
     return tx
 }
-4. Creating Transaction for Burn Procedure
+```
+Creating Transaction for Burn Procedure
 Similarly, to call the Burn procedure (which permanently burns funds):
-
+```ts
 export async function buildBurnTx(qHelper, sourcePublicKey, tick, amount) {
     const finalTick = tick + TICK_OFFSET
     const INPUT_SIZE = 0
@@ -170,7 +181,8 @@ export async function buildBurnTx(qHelper, sourcePublicKey, tick, amount) {
 
     return tx
 }
-5. Complete Flow for Executing a Transaction
+```
+Complete Flow for Executing a Transaction
 When a user interacts with the HM25 contract through the UI:
 
 The frontend fetches the current tick from the node
@@ -200,16 +212,18 @@ RPC Testing
 RPC (Remote Procedure Call) testing involves making HTTP requests to your node's RPC endpoint. This method is more suitable for frontend applications and automated testing.
 
 Key RPC Endpoints for Smart Contract Testing
+```txt
 POST /v1/querySmartContract - For reading contract state (functions)
 POST /v1/broadcast-transaction - For executing contract procedures
 GET /v1/tick-info - For getting current tick information
+```
 Base64 Encoding/Decoding
 When using RPC endpoints, you need to handle Base64 encoding and decoding:
 
 For Input Data: Encode your input parameters in Base64 before sending to the contract For Output Data: Decode the Base64 response from the contract to extract readable data
 
 Example of decoding response data:
-
+```ts
 const response = await fetch(`${httpEndpoint}/v1/querySmartContract`, {
     method: 'POST',
     headers: HEADERS,
@@ -226,6 +240,7 @@ const result = {
     field1: buf.readBigUInt64LE(0),  // First 8 bytes
     field2: buf.readBigUInt64LE(8),  // Second 8 bytes
 }
+```
 Advantages of RPC Testing
 Better for frontend integration
 Allows for automated testing scripts
@@ -235,13 +250,18 @@ Event Decoding
 Qubic provides an endpoint to decode events that occur during smart contract execution. This is useful for understanding what happened during transaction processing.
 
 Event Decoding Endpoint
+```txt
 POST https://api.qubic.org/v1/events/decodeEvent
+```
 Example Usage
+```txt
 {  
   "eventType": 0,
   "eventData": "502YpKmHdvcsWG8wdVSXWdMm7aX3DmaRnqb7fwg+2jHt81Dpwpkpl7PJ6+W0KQxRwUGu55o1nGrHBs59ZdzuPOwTAAAAAAAAp1lmAQEAMwAweDA5MDM3OGE5YzgwYzVFMUNlZDg1ZTU2QjIxMjhjMWU1MTRFNzUzNTfsEwAAAAAAAAFEoI/b27Ev7KpF7C8/x+VXJvprP801z9VmZ/C4jCDTybVi2ldtkRJBIZfQbpKq0hWl/ynKZGkfwJsDf1y9XhIA"
 }
+```
 Response
+```txt
 {
     "decodedEvent": {
         "quTransferEvent": {
@@ -251,6 +271,7 @@ Response
         }
     }
 }
+```
 This endpoint is particularly useful for:
 
 Debugging transaction failures
@@ -259,7 +280,7 @@ Tracking specific events for analytics
 Verifying that your contract is behaving as expected
 Project Structure
 When you fork the Qubic core repository, you'll be working with this structure:
-
+```txt
 /
 ├── README.md                  # General information about Qubic core
 ├── src/                       # Source code directory
@@ -267,13 +288,15 @@ When you fork the Qubic core repository, you'll be working with this structure:
 │   │   └── HM25.h             # Template smart contract file you'll modify
 │   ├── contract_core/         # Core contract functionality
 │   └── ...                    # Other Qubic core components
+```
 The key file you'll be modifying is src/contracts/HM25.h, which contains the template smart contract for the hackathon. Remember that after making changes to this file, you must run the cleanup script and then redeploy to see your changes take effect.
 
 On the testnet node that we provide, you'll find the deployment scripts in this location:
-
+```txt
 /root/qubic/qubic-docker/      # Docker scripts directory on the testnet node
 ├── deploy.sh                  # Script to deploy your SC to a node
 └── cleanup.sh                 # Script to clean up your deployment
+```
 These are the scripts you'll execute after connecting to the testnet node via SSH. Remember that after making changes to your smart contract, you must run the cleanup script and then redeploy to see your changes take effect.
 
 FAQs
@@ -303,7 +326,8 @@ A: Yes! The testnet node is pre-configured with multiple pre-funded seeds, each 
 
 Q: How do I verify my smart contract is working?
 A: After deployment, use the Qubic CLI to send commands to your contract. For example:
-
+```bash
 ./qubic-cli -nodeip YOUR_NODE_IP -nodeport YOUR_NODE_PORT -seed YOUR_SEED -somecommand
+```
 Q: What is the IPO process for smart contracts in Qubic?
-A: On the mainnet, each smart contract needs to be IPOed and approved by computors. This is a security mechanism to ensure the quality and integrity of smart contracts. For this hackathon, we've simplified the process by providing a pre-approved template contract (HM25.h) that you can modify. You can learn more about the IPO process at https://docs.qubic.org/learn/smart-contracts.
+A: On the mainnet, each smart contract needs to be IPOed and approved by computors. This is a security mechanism to ensure the quality and integrity of smart contracts. For this hackathon, we've simplified the process by providing a pre-approved template contract (HM25.h) that you can modify. You can learn more about the IPO process at <a href="https://docs.qubic.org/learn/smart-contracts">https://docs.qubic.org/learn/smart-contracts</a>
