@@ -1,4 +1,4 @@
-# BANKON PYTHAI QPI - TESTNET Ready
+# BANKON PYTHAI QPI - TESTNET Ready alpha 2
 
 [![QPI Compliance](https://img.shields.io/badge/QPI-100%25%20Compliant-brightgreen)](https://github.com/BANKONPYTHAI/qpi)
 [![Security Audit](https://img.shields.io/badge/Security-Audit%20Passed-brightgreen)](https://github.com/BANKONPYTHAI/qpi)
