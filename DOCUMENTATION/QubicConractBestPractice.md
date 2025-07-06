@@ -16,4 +16,8 @@ Security Best Practices
 
 Use require() conditions before modifying state
 Validate input values
-Use proper balance fetching methods
+Use proper balance fetching method
+
+
+examples in go
+https://github.com/qubic/qubic-hackathon/tree/main/qubic-integration-examples
