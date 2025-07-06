@@ -1,3 +1,4 @@
+// extrapolated from official Qubic Docs <a href="https://github.com/qubic/ts-library">https://github.com/qubic/ts-library</a><br />
 TypeScript Library
 Qubic provides an official TypeScript library to interact with the Qubic network programmatically:
 
