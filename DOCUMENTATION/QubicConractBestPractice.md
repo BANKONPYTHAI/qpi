@@ -21,3 +21,6 @@ Use proper balance fetching method
 
 examples in go
 https://github.com/qubic/qubic-hackathon/tree/main/qubic-integration-examples
+
+QubicLiveTree
+https://qubic.github.io/integration/Partners/qubic-rpc-doc.html?urls.primaryName=Qubic%20RPC%20Live%20Tree
