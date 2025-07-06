@@ -1,0 +1,24 @@
+// template inputs are default examples not accurate also remove this comment
+{
+  "name": "BANKON",
+  "symbol": "PYTHAI",
+  "type": "SmartContract",
+  "description": "BANKON PYTHAI is a next-gen synthetic asset protocol, bringing oracle-verified price-pegged tokens and on-chain banking to Qubic. This contract mints BKP and qBTC, powered by quantum-proof price oracles.",
+  "author": "PYTHAI <sales@pythai.net>",
+  "website": "https://bankon.pythai.com",
+  "repository": "https://github.com/BANKONPYTHAI/qpi",
+  "source_code_hash": "b3f4...9a2c", // Replace with actual SHA256 or similar hash of your contract source code
+  "license": "Qubic Anti-Military License (Code is Law Edition)",
+  "contract_file": "BANKONPYTHAI.cpp", // Or link to the raw contract file (IPFS, GitHub)
+  "total_shares": 1000000,
+  "share_price": 1,
+  "funding_goal_qubic": 1000000,
+  "ipo_start_tick": 567890,         // Replace with desired tick number for IPO start
+  "ipo_end_tick": 568390,           // Replace with desired tick number for IPO end (e.g., +500 ticks)
+  "accept_currency": "QUBIC",
+  "min_contribution": 1,
+  "max_contribution": 100000,
+  "initial_owner": "QBC1....",      // Your Qubic address, or multi-sig if using Qnosis etc.
+  "upgradeable": false,
+  "notes": "Qubic contract will burn key post-launch for true immutability. Price feeds from Pyth are integrated for qBTC pricing."
+}
