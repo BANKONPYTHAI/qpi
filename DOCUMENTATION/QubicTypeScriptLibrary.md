@@ -37,9 +37,13 @@ Handling deposits/withdrawals
 Frontend Application
 Frontend Overview
 
-We've built a frontend application that demonstrates how to interact with the Qubic blockchain and specifically with the HM25 template smart contract deployed on the testnet. This application serves as an example of how to build user interfaces for Qubic-based dApps.
+A demonstration frontend application shows how to interact with the Qubic blockchain and specifically with the HM25 template smart contract deployed on the testnet. This application serves as an example of how to build user interfaces for Qubic-based dApps. As of today, July 4, 2025 I cannot find a live testnet.
 
-Source Code: https://github.com/icyblob/hm25-frontend - Clone this repository to run the app locally, detailed setup instructions are provided in the repository README.
+Source Code: <a href="https://github.com/icyblob/hm25-frontend">https://github.com/icyblob/hm25-frontend</a> - 
+```bash
+git clone https://github.com/icyblob/hm25-frontend
+```
+to run the app locally, detailed setup instructions are provided in the repository README.
 
 Frontend Features
 Connect to a Qubic node through its RPC endpoint
