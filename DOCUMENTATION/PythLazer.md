@@ -23,7 +23,7 @@ Update Frequency: Pyth Core publishes aggregate price updates roughly every 400 
 . In essence, Lazer can refresh data hundreds of times faster than the normal Pyth feed, giving protocols the option to receive updates on a millisecond-by-millisecond basis if desired. This flexibility includes throttling or fixed schedules (e.g. a DApp could choose a 50ms feed if 1ms granularity is overkill)
 .
 Data Types: Pyth Core price feeds provide an aggregate price for each asset along with a confidence interval (a measure of uncertainty or price dispersion)
-. This means a typical Pyth Core update might say, for example, “BTC/USD = $19,405.19 ± $9.907,” indicating the network’s aggregate price and the ± range of uncertainty
+. This means a typical Pyth Core update might say, for example, “BTC/USD = $119,405.19 ± $9.907,” indicating the network’s aggregate price and the ± range of uncertainty
 . Pyth Lazer offers a richer set of market data on each update. In addition to the aggregate price, Lazer feeds can include the best bid and ask prices, order book market depth, and other customizable data points (such as moving averages in the future)
 . This gives DeFi protocols access to CEX-like granularity – they can observe not just a single price, but also the spread and liquidity, enabling more sophisticated trading strategies on-chain. (By providing this depth of data, Lazer helps decentralized platforms approach the level of insight that traders expect from traditional venues
 pyth.network
