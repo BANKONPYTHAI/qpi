@@ -8,7 +8,7 @@
 
 ## 🚀 Overview
 
-BANKON PYTHAI QPI is a complete, testnet-production-ready quantum-resistant DeFi ecosystem built on the Qubic network using the Qubic Programming Interface (QPI). This repository contains the full implementation with 100% QPI compliance, comprehensive security features, and complete deployment infrastructure.
+BANKON PYTHAI QPI is devent tested alpha testnet-production-ready alpha2 quantum-resistant DeFi ecosystem built on the Qubic network using the Qubic Programming Interface (QPI). This repository contains the full implementation with 100% QPI compliance, comprehensive security features, and complete deployment infrastructure as point of departure. This is not an actual oracle. Posted for reference to achieving alpha3 / beta1
 
 ## ✨ Features
 
