@@ -1,4 +1,4 @@
-<a href="https://explorer.qubic.org/network/assets/smart-contracts">https://explorer.qubic.org/network/assets/smart-contracts</a><br />
+https://explorer.qubic.org/network/assets/smart-contracts
 
 QX
 BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARMID
